@@ -17,7 +17,8 @@ def uplink_callback(data, client):
   print("HW serial : ", str(data.hardware_serial))
   print("Frequency : ", str(data.metadata.frequency))
   print("Gateway ID: ", str(data.metadata.gateways[0].gtw_id))
-  print("Temperatura : ", str(data.payload_fields.temperature_2))
+  tem = data.payload_fields.temperature_2
+  print("Temperatura : ", tem)
   print("Humedad : ", str(data.payload_fields.relative_humidity_7))
   print()
   print("Raw data : ", str(data.payload_raw))
